@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<% include ../common/head.ejs %>
+	<body>
+        <% include ../common/nav %>
+
+            <form action="/updatepic" method="post">
+                <input type="text" name="_id" value=<%= 'undefined' != typeof pic._id? pic._id : '' %> hidden>
+                <div>
+                    <label>Név</label>
+                    <input type="text" name="name" value= <%= 'undefined' != typeof pic.name? pic.name : '' %>>
+                </div>
+                <div>
+                    <label>Szélesség</label>
+                    <input type="number" name="width" value= <%= 'undefined' != typeof pic.width? pic.width : '' %>>
+                </div>
+                 <div>
+                    <label>Magasság</label>
+                    <input type="number" name="height" value= <%= 'undefined' != typeof pic.height? pic.height : '' %>>
+                </div>
+                 <div>
+                    <label>URL</label>
+                    <input type="text" name="path" value= <%= 'undefined' != typeof pic.path? pic.path : '' %>>
+                </div>
+                 <div>
+                    <img src="<%= 'undefined' != typeof pic.name? pic.name : '' %>">
+                </div>
+            <input type="submit"  value="Frissít">         
+            </form>
+		<% include ../common/footer %>
+	</body>
+</html>

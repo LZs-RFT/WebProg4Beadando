@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<% include ../common/head.ejs %>
+	<body>
+		<% include ../common/nav %>
+
+		<h1>Kezdőlap</h1>
+	<p><%= 'undefined' != typeof username ? 'Üdvözöljük galériánkban '+ username + '! A képek menüpontra kattintva megtekintheti gallériánkban szereplő képeket' : 'A képek csak bejelentkezés után érhetőek el, kérem jelentkezzen be!' %></p>
+
+		
+
+		<% include ../common/footer %>
+	</body>
+</html>

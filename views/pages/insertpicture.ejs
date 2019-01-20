@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<% include ../common/head.ejs %>
+	<body>
+        <% include ../common/nav %>
+
+            <form action="/insertpic" method="post">
+                <div>
+                    <input type="text" name="name" placeholder="Név">
+                </div>
+                <div>
+                    <input type="number" name="width" placeholder="Szélesség">
+                </div>
+                 <div>
+                    <input type="number" name="height" placeholder="Magasság">
+                </div>
+                 <div>
+                    <input type="text" name="path" placeholder="URL">
+                </div>
+                
+            <input type="submit"  value="Feltölt">         
+            </form>
+		<% include ../common/footer %>
+	</body>
+</html>

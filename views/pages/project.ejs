@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<% include ../common/head.ejs %>
+	<body>
+        <% include ../common/nav %>
+        
+        <a href="/insertpicture">Új kép hozzáadása</a>
+
+        <table class="table">
+			<thead class="thead-dark">
+				<tr>
+                  <th scope="col">Név</th>
+                  <th scope="col">Méret</th>
+                  <th scope="col">Kép</th>
+                  <th scope="col" colspan="2">Művelek</th>
+				</tr>
+		  	</thead>
+			<tbody class="tbody-light">
+				<% pictures.forEach(function(picture){ %>
+					<tr>
+                        <td><%= picture.name; %></td>
+                        <td><%= picture.width; %> x <%= picture.height %></td>
+                        <td><img src="<%= picture.path; %>" height="200" width="300"></td>
+                        <td><a href=<%='/project/delete:'+picture._id %> > Törlés</a></td>
+                        <td><a href=<%='/project/update:'+picture._id %> > Módosítás</a></td>
+                        <td></td>
+					</tr>				
+				<% });	%>
+			</tbody>
+		</table>
+		
+
+		<% include ../common/footer %>
+	</body>
+</html>

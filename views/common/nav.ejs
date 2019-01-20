@@ -1,0 +1,7 @@
+<nav>
+ <a href="/project" <%= 'undefined' != typeof username ? '': 'hidden' %>>Képek</a>
+ <a href="/logout"  <%= 'undefined' != typeof username ? '': 'hidden' %>>Kijelentkezés</a>
+ <a href="/login"   <%= 'undefined' != typeof username ? 'hidden': '' %>>Bejelentkezés</a>
+ <%=  console.log('Felhasználónév :'); %>
+ <%= 'undefined' != typeof username ? console.log(username) : '' %>
+</nav>
